@@ -14,9 +14,10 @@
     {% block head %}{% endblock %}
     <script src="/js/alpine.js?v={% version %}"></script>
   </head>
-  <body>
-    {% block content %}
-      {{ content | safe }}
-    {% endblock %}
+  <body class="bg-gray-200 font-mono">
+  {% include "partials/_header.njk" %}
+  {% block content %}
+    {{ content | safe }}
+  {% endblock %}
   </body>
 </html>

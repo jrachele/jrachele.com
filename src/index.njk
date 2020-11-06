@@ -1,0 +1,35 @@
+{% extends "src/_includes/default.njk" %}
+
+{% block title %}Julian Rachele | About{% endblock %}
+
+{% block content %}
+<div class="mx-10 my-4 px-4">
+  <h1 class="font-semibold text-3xl text-purple-900">About me</h1>
+  <div class="flex flex-col md:flex-row items-center">
+  <div>
+  <p>I am a 22 year old graduate student from Greenville, South Carolina. I was born in Arizona though and lived there for 8 years, so is that where I'm actually "from"? Seems to be a bit ambiguous. I'm American, I guess. Like many scatterbrained children of the internet, I have a wide range of interests of varying utility.</p>
+  <p>Food is basically everything. We are all spinning out of control on this spec of dust, so why not enjoy some tasty flavor combinations?</p>
+  </div>
+  <img src="img/self_portrait.png" class="w-48 md:w-auto h-auto md:h-32 lg:h-24 my-12 lg:my-4 ml-4 rounded-full">
+  </div>
+  <h1 class="font-semibold text-3xl text-purple-900 py-2">Interests</h1>
+  <ul class="list-disc mx-4">
+    <li>Cooking</li>
+    <li>Video games</li>
+    <li>Programming</li>
+    <li>Design</li>
+    <li>Mind-numbing reality TV</li>
+    <li>Foreign languages? I am a serial dabbler. Get really obsessed and motivated to learn a language then come back down to Earth and lose motivation after a couple months. Decent at French though</li>
+  </ul>
+  <h1 class="font-semibold text-3xl text-purple-900 py-2">Projects</h1>
+  <div class="card">
+    <div class="flex items-start">
+      <img src="img/redcraft_logo.png" class="w-auto h-20 mr-4">
+      <div class="description">
+      <h1 class="text-2xl font-semibold">REDCRAFT</h1>
+      <p>REDCRAFT is a software suite that will computationally determine protein structure from Residual Dipolar Couplings.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

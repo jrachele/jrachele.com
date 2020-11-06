@@ -3,13 +3,14 @@ const htmlmin = require("html-minifier");
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget("./_tmp/style.css");
-
-  eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
+  eleventyConfig.addWatchTarget("_site/style.css");
 
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
   });
+
+  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/pdf");
 
   eleventyConfig.addShortcode("version", function () {
     return String(Date.now());
@@ -31,4 +32,11 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
+
+  // Use src directory as inputs for template rendering
+  return {
+    dir: {
+      input: "src"
+    }
+  }
 };

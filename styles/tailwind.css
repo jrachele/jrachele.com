@@ -7,3 +7,7 @@
     color: black;
   }
 }
+
+.card {
+  @apply shadow-md bg-gray-800 text-gray-200 m-8 p-6 rounded;
+}
