@@ -25,7 +25,7 @@
   {% for project in collections.projects %}
   <div class="shadow-md bg-gray-800 text-gray-200 m-8 p-6 rounded" x-data="{open: false}">
     <div class="flex items-center">
-      <a href="{{ project.data.link }}" class="w-auto h-20 mr-4"><img src="{{ project.data.image }}"></a>
+      <a href="{{ project.data.link }}" class="w-full h-20 mr-4"><img class="w-auto h-20 mr-4" src="{{ project.data.image }}"></a>
       
       <div class="description">
         <div class="flex flex-row items-center">
