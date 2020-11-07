@@ -22,13 +22,37 @@
     <li>Foreign languages? I am a serial dabbler. Get really obsessed and motivated to learn a language then come back down to Earth and lose motivation after a couple months. Decent at French though</li>
   </ul>
   <h1 class="font-semibold text-3xl text-purple-900 py-2">Projects</h1>
-  <div class="card">
-    <div class="flex items-start">
-      <img src="img/redcraft_logo.png" class="w-auto h-20 mr-4">
+  <div class="shadow-md bg-gray-800 text-gray-200 m-8 p-6 rounded" x-data="{open: false}">
+    <div class="flex items-center">
+      <a href="https://redcraft.readthedocs.io" class="w-auto h-20 mr-4"><img src="img/redcraft_logo.png"></a>
+      
       <div class="description">
-      <h1 class="text-2xl font-semibold">REDCRAFT</h1>
-      <p>REDCRAFT is a software suite that will computationally determine protein structure from Residual Dipolar Couplings.</p>
+        <div class="flex flex-row items-center">
+        <a href="https://redcraft.readthedocs.io"><h1 class="text-2xl font-semibold mr-4">REDCRAFT</h1></a>
+        </div>
+        <p>REDCRAFT is a software suite that will computationally determine protein structure from Residual Dipolar Couplings.</p>
       </div>
+      <!-- Button for opening card -->
+      <div class="ml-4">
+        <div @click="open = !open;" class="flex items-center cursor-pointer px-3 py-2 text-gray-200 hover:text-gray-600" :class="{'transform rotate-180': open}">
+          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- Collapsed content -->
+    <div class="w-full flex flex-col mt-8" :class="{'hidden': !open}">
+      <hr class="mb-4 border-gray-700">
+      <p>Over the course of two years, I have worked on REDCRAFT, a project created by Homayoun Valafar at the University of South Carolina in 2003.</p>
+      <p>The project is a C++ project that outputs PDB files based on RDC files provided in the universal <a href="https://www.nature.com/articles/nsmb.3041"><u>NEF</u></a> format.</p>
+      <p>As far as what I have done specifically:</p>
+      <ul class="list-disc ml-4 mt-2">
+        <li>Created UI in Qt5 (C++) to leverage REDCRAFT's command line utilities</li>
+        <li>Updated REDCRAFT to C++11 and to CMake, building REDCRAFT/REDCAT libraries and GUI simultaneously</li>
+        <li>Updated documentation to be generated on commit, using <em>readthedocs.io</em></li>
+        <li>Introduced unit tests and helped set up Continuous Deployment pipeline</li>
+      </ul>
     </div>
   </div>
 </div>
