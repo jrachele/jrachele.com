@@ -7,3 +7,7 @@
     color: black;
   }
 }
+
+ul {
+  @apply list-disc ml-4 mt-2;
+}
