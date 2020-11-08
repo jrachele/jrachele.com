@@ -23,7 +23,7 @@
   </ul>
   <h1 class="font-semibold text-3xl text-purple-900 py-2">Projects</h1>
   {% for project in collections.projects %}
-  <div class="shadow-md bg-gray-800 text-gray-200 m-8 p-6 rounded" x-data="{open: false}">
+  <div class="shadow-md bg-gray-800 text-gray-200 mx-0 my-8 lg:mx-8 lg:my-8 p-6 rounded" x-data="{open: false}">
     <div class="flex items-center flex-col md:flex-row">
       <!-- Image -->
       <img class="w-20 md:w-auto h-auto md:h-20 m-4 mr-6" src="{{ project.data.image }}">
