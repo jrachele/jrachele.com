@@ -2,12 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .change {
-    color: black;
-  }
-}
-
 ul {
   @apply list-disc ml-4 mt-2;
+}
+
+h1 {
+  @apply font-semibold text-4xl text-gray-900;
+}
+
+h2 {
+  @apply font-semibold text-3xl text-gray-900;
+}
+
+h3 {
+  @apply font-semibold text-2xl text-gray-700;
+}
+
+code {
+  @apply rounded;
+}
+
+a {
+  @apply underline;
 }

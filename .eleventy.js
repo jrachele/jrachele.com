@@ -1,9 +1,14 @@
 const htmlmin = require("html-minifier");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget("_site/style.css");
+  eleventyConfig.addPassthroughCopy({"styles/prism-material-oceanic.css": "syntaxhighlighting.css"});
+
+  eleventyConfig.addWatchTarget("./_tmp/style.css");
+
+  eleventyConfig.addPassthroughCopy({ "./_tmp/style.css": "./style.css" });
 
   eleventyConfig.addPassthroughCopy({
     "./node_modules/alpinejs/dist/alpine.js": "./js/alpine.js",
@@ -32,6 +37,8 @@ module.exports = function (eleventyConfig) {
 
     return content;
   });
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   // Use src directory as inputs for template rendering
   return {

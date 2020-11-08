@@ -1,0 +1,12 @@
+{% extends "default.njk" %}
+
+{% block title %}{{ title }} | Julian Rachele Blog {% endblock %}
+
+{% block content %}
+    <div class="m-8">
+        <h1 class="text-center">{{ title }}</h1>
+        <p class="text-center"><em>Published {{ page.date.toUTCString() }}</em></p>
+        <img class="object-cover h-48 w-full rounded my-8" src="{{ image }}">
+        {{ content | safe }}
+    </div>
+{% endblock %}

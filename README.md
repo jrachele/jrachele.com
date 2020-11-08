@@ -1,47 +1,6 @@
-# eleventy-tailwindcss-alpinejs-starter
+# Personal Website 
 
-A starter repository showing how to build a website with the [Eleventy](https://www.11ty.dev), [Tailwind CSS](https://tailwindcss.com), and [Alpine.js](https://github.com/alpinejs/alpine).
+This is an updated version of my personal website, which also contains a blog.
+It currently does not support multiple locales, although that is coming soon (tm)
 
-## Getting Started
-
-### 1. Clone this Repository
-
-```
-git clone https://github.com/gregwolanski/eleventy-tailwindcss-alpinejs-starter.git my-website-name
-```
-
-### 2. Navigate to the directory
-
-```
-cd my-website-name
-```
-
-### 3. Install dependencies
-
-```
-npm install
-```
-
-### 4. Build the project to generate the first CSS
-
-This step is only required the very first time.
-
-```
-npm run build
-```
-
-### 5. Run Eleventy
-
-```
-npm run start
-```
-
-## Author
-
-[Greg Wolanski](https://gregwolanski.com)
-
-## License
-
-MIT
-
-See `LICENSE` for more information.
+Kudos to Greg Wolanski for his [Eleventy Starter with TailwindCSS and Alpine.js](https://css-tricks.com/eleventy-starter-with-tailwind-css-alpine-js/)

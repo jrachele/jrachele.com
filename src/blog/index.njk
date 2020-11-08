@@ -1,0 +1,19 @@
+{% extends "default.njk" %}
+
+{% block title %}Julian Rachele | Blog{% endblock %}
+
+{% block content%}
+    {% for post in collections.post %}
+        <div class="shadow-md bg-gray-800 text-gray-200 m-8 p-6 rounded">
+            <div class="flex items-center flex-col md:flex-row">
+              <!-- Image -->
+              <img class="w-20 md:w-auto h-auto md:h-20 m-4 mr-6" src="{{ post.data.image }}">
+              <div class="description">
+                <div class="flex flex-row items-center">
+                <a href="{{ post.url }}"><h1 class="text-2xl font-semibold mr-4 text-gray-200">{{ post.data.title }}</h1></a>
+                </div>
+                <p><em>{{ post.date.toUTCString() }}</em></p>
+              </div>
+        </div>
+    {% endfor %}
+{% endblock %}
