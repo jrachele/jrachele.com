@@ -3,7 +3,7 @@ layout: blogpost.njk
 tags: post
 title: So I've decided to make a blog
 image: /img/post/test.png
-date: Last Modified
+date: Created
 permalink: "/blog/posts/{{ title | slug }}/index.html"
 ---
 
